@@ -1,10 +1,28 @@
+@font-face {
+    font-family: 'hk_grotesk';
+    src: url('../assets/fonts/hkgrotesk-bold-webfont.woff2') format('woff2'),
+         url('../assets/fonts/hkgrotesk-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hk_grotesk';
+    src: url('../assets/fonts/hkgrotesk-regular-webfont.woff2') format('woff2'),
+         url('../assets/fonts/hkgrotesk-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 :root{
   --cozy-magenta:#ea7263;
   --cozy-pink:#e879b0;
 }
 
 body {
-    font-family: 'Inconsolata', monospace;
+    font-family: 'hk_grotesk', monospace;
     background: linear-gradient(var(--cozy-magenta), var(--cozy-pink));
     position: relative;
     -webkit-font-smoothing: antialiased;
@@ -13,24 +31,19 @@ body {
 }
 
 
-p {
-    /* font-family: 'Inconsolata', monospace;
-    text-align: left;
-    font-size: 1 em;
-    color: black;
-    line-height: 2em;
-    text-align: justify;
-    text-justify: inter-word; */
-}
-
-h1,
+/* h1,
 h2,
 h3,
 h4,
 h5 {
-    font-weight: 700;
-}
+    font-weight: bold;
+} */
 
+.header-title{
+  max-width: 100%;
+  height: auto;
+  margin: 70px 0 15px 0;
+}
 
 #cozy-nav{
     background-color: transparent!important;
@@ -50,7 +63,6 @@ h5 {
 
 #cozy-nav .nav-item{
   border-bottom: 2px solid var(--cozy-pink);
-  /* background: linear-gradient(rgba(234, 114, 99,0.75), rgba(232, 121, 176,1)); */
   padding: 0 1rem;
 }
 
@@ -77,7 +89,8 @@ h5 {
 }
 
 #navbar-left .list-group-item.active{
-  color: white!important;
+  color: rgb(33, 37, 41)!important;
+  font-weight: bold;
 }
 
 #navbar-left .list-group-item-action{
@@ -114,7 +127,7 @@ h5 {
 
 .drop-cap{
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: bold;
   float: left;
   margin-right: 2rem;
   line-height: 1.4rem;
@@ -122,11 +135,31 @@ h5 {
 }
 
 .cozy-bold{
-  font-weight: 700;
+  font-weight: bold;
 }
 
 .chapter{
   margin-bottom: 3rem;
+}
+
+.credits{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.credits-list{
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.credits-list a{
+  color: #212529;
+  text-decoration: underline;
+}
+
+.credits-list a:hover{
+  color: #212529;
+  text-decoration: underline;
 }
 
 /*! Header */
@@ -177,6 +210,10 @@ sup{
 
   #notes ol {
     column-count: 2;
+  }
+
+  .header-title{
+    margin: 50px 0 50px 0;
   }
 
  }
