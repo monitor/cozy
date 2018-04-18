@@ -19,6 +19,7 @@
 :root{
   --cozy-magenta:#ea7263;
   --cozy-pink:#e879b0;
+  --cozy-border:#BC376A;
 }
 
 body {
@@ -39,6 +40,15 @@ h4,
 h5 {
     font-weight: bold;
 } 
+
+hr {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border: none;
+  height: 2px;
+  color: #333; /* old IE */
+  background-color: var(--cozy-pink); /* Modern Browsers */
+}
 
 .header-title{
   max-width: 100%;
@@ -133,6 +143,7 @@ h5 {
   margin-right: 2rem;
   line-height: 1.4rem;
   margin-bottom: 0.9rem;
+  padding-top: 3px;
 }
 
 .cozy-bold{
